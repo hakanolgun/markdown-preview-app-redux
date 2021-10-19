@@ -1,7 +1,10 @@
 import "./App.css";
 import ReactMarkdown from "react-markdown";
+import { useSelector } from "react-redux";
 
 function App() {
+  const content = useSelector((state) => state.markdown.content);
+
   return (
     <div className="App">
       <div className="heading">
@@ -9,7 +12,7 @@ function App() {
       </div>
       <div className="container">
         <textarea name="" id="" cols="30" rows="10"></textarea>
-        <ReactMarkdown>heloow</ReactMarkdown>
+        <ReactMarkdown children={content} />
       </div>
     </div>
   );
