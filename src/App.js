@@ -1,8 +1,10 @@
 import "./App.css";
 import ReactMarkdown from "react-markdown";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { changeContent } from "./redux/markdownSlice";
 
 function App() {
+  const dispatch = useDispatch();
   const content = useSelector((state) => state.markdown.content);
 
   return (
@@ -11,8 +13,13 @@ function App() {
         <h1>Markdown Preview App</h1>
       </div>
       <div className="container">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <ReactMarkdown children={content} />
+        <textarea
+          className="text_area two"
+          placeholder="Write here..."
+          value={content}
+          onChange={(e) => dispatch(changeContent(e.target.value))}
+        />
+        <ReactMarkdown className="markdown_area two" children={content} />
       </div>
     </div>
   );
