@@ -17,12 +17,11 @@ h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-.example_btn{
+.example_btn {
   font-size: 2rem;
   font-weight: bolder;
   padding: 0.75rem 1.25rem;
   border-radius: 50%;
-  border: 2px soli red;
   outline: none;
 }
 .container {
@@ -54,10 +53,22 @@ h1 {
   h1 {
     font-size: 1.7rem;
   }
+  .example_btn {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    outline: none;
+  }
   .container {
     grid-template-columns: 1fr;
     padding: 1rem;
     min-height: 80vh;
+  }
+  .text_area {
+    outline: none;
+    border: none;
+    min-height: 50vh;
   }
   .two {
     padding: 1.5rem;

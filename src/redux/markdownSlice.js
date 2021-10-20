@@ -1,5 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const example = `
+# Heading
+
+## Subheading
+
+A paragraph with *emphasis* and **strong importance**.
+
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b |
+| - | - |
+`;
+
 export const MarkdownSlice = createSlice({
   name: "markdown",
   initialState: {
@@ -9,9 +28,11 @@ export const MarkdownSlice = createSlice({
     changeContent: (state, action) => {
       state.content = action.payload;
     },
-    changeToExample:(state)=>{
-      state.content = "# Heading<br>## subheading"
-    }
+    changeToExample: (state) => {
+      state.content === example
+        ? (state.content = "")
+        : (state.content = example);
+    },
   },
 });
 
