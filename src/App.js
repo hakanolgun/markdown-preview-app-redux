@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <div className="heading">
         <h1>Markdown Preview App</h1>
+        <button className="example_btn">?</button>
       </div>
       <div className="container">
         <textarea

@@ -6,20 +6,31 @@
 .heading {
   background-color: antiquewhite;
   height: 7rem;
+  padding: 3rem 0rem 1rem 0rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #333;
 }
 h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.example_btn{
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50%;
+  border: 2px soli red;
+  outline: none;
 }
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
-  height: calc(100vh - 11rem);
+  height: calc(100vh - 15rem);
 }
 .two {
   border-radius: 10px;
