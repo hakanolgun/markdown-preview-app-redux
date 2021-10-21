@@ -1,6 +1,6 @@
 # Markdown Preview App
 
-<img src="./src/markdown-preview-app.png" alt="screenshot" width:"100%" />
+<img src="./src/markdown-preview-app.png" alt="screenshot" width="100%" />
 
 ## Tools
 
